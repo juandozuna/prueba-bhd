@@ -16,4 +16,8 @@ export class AddCommentComponent implements OnInit {
     this.commentFormComponent.openCreateMode();
   }
 
+  submitted(event) {
+    console.log(event);
+  }
+
 }
