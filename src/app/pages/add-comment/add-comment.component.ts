@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {CommentFormComponent} from '../../components/comment-form/comment-form.component';
 
 @Component({
   selector: 'app-add-comment',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCommentComponent implements OnInit {
 
+  @ViewChild(CommentFormComponent) commentFormComponent: CommentFormComponent;
+
   constructor() { }
 
   ngOnInit() {
+    this.commentFormComponent.openCreateMode();
   }
 
 }
