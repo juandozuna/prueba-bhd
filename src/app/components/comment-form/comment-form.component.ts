@@ -10,7 +10,7 @@ import {CommentModel} from '../../models/comment';
 export class CommentFormComponent implements OnInit {
 
   commentForm: FormGroup;
-  onSubmit: EventEmitter<CommentModel> = new EventEmitter();
+  @Output() onSubmit: EventEmitter<CommentModel> = new EventEmitter();
 
   constructor(
     private fb: FormBuilder

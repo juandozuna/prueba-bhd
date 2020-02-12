@@ -13,4 +13,8 @@ export class CommentService {
   async getComments(): Promise<CommentModel[]> {
     return this.http.get<CommentModel[]>(`${this.baseUrl}/comments`).toPromise();
   }
+
+  async createComment(comment) {
+    return this.http.post(`${this.baseUrl}/comments`, comment).toPromise();
+  }
 }
