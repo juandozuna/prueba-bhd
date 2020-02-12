@@ -9,6 +9,7 @@ import { CommentListPageComponent } from "./pages/comment-list-page/comment-list
 import { CommentListComponent } from "./pages/comment-list-page/comment-list/comment-list.component";
 import { CommentService } from "./services/comment.service";
 import { HttpClientModule } from "@angular/common/http";
+import { AddCommentComponent } from './pages/add-comment/add-comment.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from "@angular/common/http";
     HeaderComponent,
     FooterComponent,
     CommentListPageComponent,
-    CommentListComponent
+    CommentListComponent,
+    AddCommentComponent
   ],
   bootstrap: [AppComponent],
   providers: [CommentService]

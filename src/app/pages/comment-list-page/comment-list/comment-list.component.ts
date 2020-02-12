@@ -9,7 +9,7 @@ import {CommentModel} from '../../../models/comment.model';
 })
 export class CommentListComponent implements OnInit {
 
-  comments: CommentModel;
+  comments: CommentModel[] = [];
   constructor(
     private commentService: CommentService
   ) { }
@@ -24,8 +24,17 @@ export class CommentListComponent implements OnInit {
     });
   }
 
+  getWebsiteValue(val: string) {
+    if (val === null || val === undefined) {
+      return "N/A";
+    }
+    return val;
+  }
+
+
   private async getDataRequest() { 
     const data = await this.commentService.getComments();
+    this.comments = data;
     console.log(data, 'COMMENTS');
   }
 

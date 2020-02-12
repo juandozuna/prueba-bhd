@@ -12,4 +12,8 @@ export class CommentListPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToAddComment() {
+    
+  }
+
 }
