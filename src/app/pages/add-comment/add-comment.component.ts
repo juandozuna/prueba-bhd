@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {CommentFormComponent} from '../../components/comment-form/comment-form.component';
-import {CommentService} from '../../services/comment';
+import {CommentService} from '../../services/comment.service';
 import {Router} from '@angular/router';
 
 @Component({
